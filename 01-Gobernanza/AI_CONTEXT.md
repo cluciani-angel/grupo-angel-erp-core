@@ -31,3 +31,8 @@ Centralizar la arquitectura contable del Grupo Ángel. Evitar el "Frankenstein E
 * **Backend Logic:** Google Apps Script (.gs) y GCP Cloud Functions.
 * **Política:** Todo código .gs debe respaldarse en la carpeta `06-Apps-Script`.
 * **AI Prompts:** Los prompts de los bots deben guardarse en `07-AI-Ops`.
+
+## 7. Integración Google Colab (Laboratorio)
+* **Ruta:** `08-Laboratorio-Colab/`.
+* **Uso:** Prototipado, Análisis de Datos, Visualización.
+* **Transición:** El código estable de Colab debe migrarse eventualmente a scripts `.py` en `05-Migracion` para producción.
