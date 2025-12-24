@@ -1,0 +1,170 @@
+Account_Code,Account_Name,Account_Type,Parent_Account_Code,Description,Applies_To_Orgs,Notes
+1-0000,ACTIVOS,other_asset,,Agrupador Principal Activos,ALL,HEADER - DO NOT USE
+1-0100,EFECTIVO Y EQUIVALENTES,cash,1-0000,Agrupador Disponibilidad,ALL,PARENT
+1-0101,CAJA GENERAL,cash,1-0100,Efectivo Central,ALL,PARENT
+1-0101-01,CAJA CHICA Administracion,cash,1-0101,Fondo fijo gastos menores admin,ALL,
+1-0101-02,CAJA CHICA Operaciones,cash,1-0101,Fondo fijo operaciones y mantenimiento,ALL,
+1-0102,CAJAS OPERATIVAS CASINO Tipo C,cash,1-0100,Fondos de juego,CASINOS,PARENT
+1-0102-01,CAJA Boveda Principal,cash,1-0102,Boveda central casino,CASINOS,
+1-0102-02,CAJA Cambio Slots,cash,1-0102,Fondo para cambio maquinas Bill Breaker,CASINOS,
+1-0102-03,CAJA Apuestas Deportivas,cash,1-0102,Caja Sportbook,CASINOS,
+1-0103,FONDOS DE CAMBIO FB,cash,1-0100,Cambio para cajas registradoras,CASINOS,PARENT
+1-0103-01,FONDO CAMBIO Bar,cash,1-0103,Cambio caja bar,CASINOS,
+1-0103-02,FONDO CAMBIO Restaurante,cash,1-0103,Cambio caja restaurante,CASINOS,
+1-0104,CAJAS RUTAS EXTERNAS,cash,1-0100,Recaudacion en calle Rutas,CASINOS,NEW ROUTE CASH
+1-0105,FONDOS EN TRANSITO,cash,1-0100,Dinero recaudado pendiente de deposito,ALL,
+1-0200,BANCOS,bank,1-0000,Cuentas Bancarias,ALL,PARENT
+1-0201,BANCO GENERAL Cta Corriente,bank,1-0200,Cuenta operativa principal,ALL,
+1-0202,BANCO Cuenta Nomina,bank,1-0200,Exclusiva para pago planillas,ALL,
+1-0203,BANCO Cuenta USD,bank,1-0200,Cuenta en moneda extranjera,ALL,
+1-0204,CTA GARANTIA Licencia Juego,bank,1-0200,Deposito restringido JCJ,CASINOS,
+1-0210,PASARELAS PAGO DIGITAL,bank,1-0200,Wallets digitales,ALL,PARENT
+1-0210-01,YAPPY Comercial,bank,1-0210,Cobros via Yappy,ALL,
+1-0210-02,NEQUI Empresarial,bank,1-0210,Cobros via Nequi,ALL,
+1-0300,CXC CUENTAS POR COBRAR,accounts_receivable,1-0000,Agrupador CXC,ALL,PARENT
+1-0301,CXC Clientes Terceros,accounts_receivable,1-0300,Facturas a credito clientes,ALL,
+1-0302,CXC Intercompanias,accounts_receivable,1-0300,Saldos a cobrar filiales,ALL,CRITICAL CONSOLIDATION
+1-0310,CXC Gastos Reembolsables Billable,accounts_receivable,1-0300,Gastos por cuenta de clientes MFW,MFW,CRITICAL TRANSPARENCY
+1-0400,INV INVENTARIOS,inventory,1-0000,Agrupador Existencias,ALL,PARENT
+1-0410,INV Alimentos y Bebidas,inventory,1-0400,Stock FB,CASINOS|MFW,PARENT
+1-0410-01,INV Bebidas Alcoholicas,inventory,1-0410,Licores cervezas vinos,CASINOS|MFW,
+1-0410-02,INV Bebidas No Alcoholicas,inventory,1-0410,Sodas aguas jugos,CASINOS|MFW,
+1-0410-03,INV Alimentos Perecederos,inventory,1-0410,Carnes vegetales lacteos,CASINOS|MFW,
+1-0410-04,INV Secos y Enlatados,inventory,1-0410,Abarrotes,CASINOS|MFW,
+1-0420,INV Suministros Operativos,inventory,1-0400,Consumibles operacion,ALL,PARENT
+1-0420-01,INV Suministros Bar y Rest Venta,inventory,1-0420,Insumos facturables,CASINOS|MFW,
+1-0420-02,INV Repuestos Maquinas Propio,inventory,1-0420,Repuestos slots propios,CASINOS,
+1-0420-03,INV Repuestos Maquinas Terceros,inventory,1-0420,Repuestos para facturar a clientes,MFW,
+1-0430,INV Produccion Cerveceria,inventory,1-0400,Stock Fabrica,LUXURY,PARENT
+1-0430-01,INV Materia Prima Malta Lupulo,inventory,1-0430,Insumos cerveceros,LUXURY,
+1-0430-02,INV Envases y Etiquetas,inventory,1-0430,Material empaque,LUXURY,
+1-0430-03,INV Producto en Proceso,inventory,1-0430,Tanques fermentacion,LUXURY,
+1-0430-04,INV Producto Terminado,inventory,1-0430,Cerveza lista venta,LUXURY,
+1-0440,INV Mercancia Mayorista,inventory,1-0400,Stock Reventa,MFW,PARENT
+1-0450,INV Premios y Tombolas Custodia,inventory,1-0400,Stock premios almacenado en MFW,ALL,NEW POOL CONTROL
+1-0490,INV Inactivo Expansion Futura,inventory,1-0400,Fichas y Naipes No usar,CASINOS,FUTURE USE
+1-0500,ACTIVOS CORRIENTES DIVERSOS,other_current_asset,1-0000,Agrupador Otros,ALL,PARENT
+1-0501,ANTICIPOS a Proveedores,other_current_asset,1-0500,Pagos anticipados compra,ALL,
+1-0502,ANTICIPOS a Empleados,other_current_asset,1-0500,Adelantos salariales,ALL,
+1-0503,GASTOS Pagados por Anticipado,other_current_asset,1-0500,Seguros alquileres prepagados,ALL,
+1-0504,CREDITO FISCAL ITBMS,other_current_asset,1-0500,ITBMS Compras deducible,ALL,
+1-0600,ACTIVOS FIJOS PPE,fixed_asset,1-0000,Propiedad Planta Equipo,ALL,PARENT
+1-0601,PPE Terrenos,fixed_asset,1-0600,Terrenos propiedad,ANGEL_G,
+1-0602,PPE Edificios y Mejoras,fixed_asset,1-0600,Edificaciones,ALL,
+1-0603,PPE Maquinaria y Equipo Casino,fixed_asset,1-0600,Slots mesas sillas juego,CASINOS,
+1-0604,PPE Maquinaria Produccion,fixed_asset,1-0600,Tanques embotelladora,LUXURY,
+1-0605,PPE Mobiliario y Equipo Oficina,fixed_asset,1-0600,Muebles computadoras,ALL,
+1-0606,PPE Equipo de Transporte,fixed_asset,1-0600,Vehiculos flota,ALL,
+1-0607,ACTIVOS INTANGIBLES,other_asset,1-0600,Software marcas licencias,ALL,
+1-0699,DEPRECIACION ACUMULADA,accumulated_depreciation,1-0600,Contra cuenta global activos,ALL,
+2-0000,PASIVOS,other_liability,,Agrupador Principal Pasivos,ALL,HEADER - DO NOT USE
+2-0100,CXP CUENTAS POR PAGAR,accounts_payable,2-0000,Agrupador CXP,ALL,PARENT
+2-0101,CXP Proveedores Locales,accounts_payable,2-0100,Facturas proveedores,ALL,
+2-0102,CXP Proveedores Exterior,accounts_payable,2-0100,Facturas importacion,ALL,
+2-0103,CXP Intercompanias,accounts_payable,2-0100,Saldos a pagar filiales,ALL,CRITICAL CONSOLIDATION
+2-0150,CXP Fondos Recaudados Terceros,other_current_liability,2-0100,Dinero de maquinas ajenas MFW,MFW,CRITICAL TRANSPARENCY
+2-0160,CXP Participacion Revenue Share,other_current_liability,2-0100,Deuda a duenos de maquinas Royal Estape,CASINOS,NEW REVENUE SHARE
+2-0170,CXP Comisiones Rutas,other_current_liability,2-0100,Deuda a duenos de Locales Rutas,CASINOS,NEW ROUTE LIAB
+2-0200,IMPUESTOS POR PAGAR,other_current_liability,2-0000,Obligaciones Fiscales,ALL,PARENT
+2-0201,ITBMS 7 PC Ventas,other_current_liability,2-0200,Debito fiscal general,ALL,
+2-0202,ITBMS 10 PC Licores,other_current_liability,2-0200,Debito fiscal alcohol,MFW|CASINOS,
+2-0203,ITBMS 15 PC Servicios,other_current_liability,2-0200,Debito fiscal honorarios,ANGEL_A,
+2-0204,RETENCIONES ITBMS por Pagar,other_current_liability,2-0200,Retenciones practicadas,ALL,
+2-0205,ISR por Pagar,other_current_liability,2-0200,Impuesto Renta Anual,ALL,
+2-0206,SEGURO SOCIAL Patronal,other_current_liability,2-0200,Cuota CSS Empresa,ALL,
+2-0207,SEGURO EDUCATIVO Patronal,other_current_liability,2-0200,Cuota SE Empresa,ALL,
+2-0208,RETENCIONES Empleados CSS SE ISR,other_current_liability,2-0200,Descuentos nomina a pagar,ALL,
+2-0209,GAMING TAX por Pagar 10 PC GGR,other_current_liability,2-0200,Impuesto JCJ sobre Ingreso Bruto,CASINOS,
+2-0210,JCJ 5.5 PC Retencion Selectiva,other_current_liability,2-0200,Impuesto retenido a jugador Cashout,CASINOS,NEW
+2-0300,OBLIGACIONES LABORALES,other_current_liability,2-0000,Beneficios Empleados,ALL,PARENT
+2-0301,SALARIOS por Pagar,other_current_liability,2-0300,Nomina neta pendiente,ALL,
+2-0302,PROVISION Vacaciones,other_current_liability,2-0300,Provision vacaciones,ALL,
+2-0303,PROVISION XIII Mes,other_current_liability,2-0300,Provision XIII mes,ALL,
+2-0304,PROVISION Antiguedad,other_current_liability,2-0300,Provision antigüedad,ALL,
+2-0400,PASIVOS LARGO PLAZO,long_term_liability,2-0000,Deuda mayor 1 anio,ALL,PARENT
+2-0401,PRESTAMOS Bancarios LP,long_term_liability,2-0400,Deuda bancaria,ALL,
+2-0402,PRESTAMOS Accionistas,long_term_liability,2-0400,Deuda socios,ALL,
+3-0000,PATRIMONIO,equity,,Agrupador Patrimonio,ALL,HEADER - DO NOT USE
+3-0100,CAPITAL SOCIAL,equity,3-0000,Capital,ALL,PARENT
+3-0101,CAPITAL Suscrito y Pagado,equity,3-0100,Acciones comunes,ALL,
+3-0200,RESULTADOS,equity,3-0000,Ganancias Perdidas,ALL,PARENT
+3-0201,UTILIDADES Retenidas,equity,3-0200,Resultados acumulados,ALL,
+3-0202,UTILIDAD del Periodo,equity,3-0200,Resultado actual System,ALL,DO NOT TOUCH
+3-0203,RESERVA Legal,equity,3-0200,Reserva ley panama,ALL,
+4-0000,INGRESOS,income,,Agrupador Ingresos,ALL,HEADER - DO NOT USE
+4-1000,ING CASINO Tipo C,income,4-0000,Ventas Juego Maquinas,CASINOS,PARENT
+4-1100,ING Slots Tragamonedas,income,4-1000,Win maquinas propias,CASINOS,
+4-1200,ING Apuestas Deportivas,income,4-1000,Sportbook y Hipica,CASINOS,
+4-1300,ING Torneos,income,4-1000,Entradas torneos,CASINOS,
+4-1500,ING OPERACIONES DE RUTAS,income,4-0000,Ventas en locales de terceros,CASINOS,NEW ROUTE INC
+4-1501,ING Rutas Tragamonedas,income,4-1500,Win en maquinas rutas,CASINOS,
+4-1900,DESC y Cortesias Casino,income,4-1000,Contra cuenta promos,CASINOS,
+4-1999,ING Mesas Expansion Futura,income,4-1000,Blackjack Poker Inactivo,CASINOS,FUTURE USE
+4-2000,ING FB,income,4-0000,Ventas Alimentos Bebidas,CASINOS,PARENT
+4-2100,ING Bebidas Alcoholicas,income,4-2000,Bar alcohol,CASINOS,
+4-2200,ING Alimentos,income,4-2000,Restaurante,CASINOS,
+4-2300,ING Bebidas No Alcoholicas,income,4-2000,Bar soft drinks,CASINOS,
+4-2900,DESC y Cortesias FB,income,4-2000,Contra cuenta,CASINOS,
+4-3000,ING PRODUCCION,income,4-0000,Ventas Fabrica,LUXURY,PARENT
+4-3100,ING Cerveza Artesanal,income,4-3000,Producto propio,LUXURY,
+4-3200,ING Servicios de Maquila,income,4-3000,Produccion terceros,LUXURY,
+4-4000,ING MAYORISTA Y SERVICIOS MFW,income,4-0000,Distribucion y Gestion,MFW,PARENT
+4-4100,ING Venta Mercancia Mayorista,income,4-4000,Distribucion productos,MFW,
+4-4200,ING Servicios Tecnicos y Logistica,income,4-4000,Instalacion y flete,MFW,
+4-4300,ING Comisiones por Recaudacion,income,4-4000,Fee sobre maquinas terceros,MFW,
+4-5000,ING INMOBILIARIA,income,4-0000,Rentas,ANGEL_G,PARENT
+4-5100,ING Alquileres Comerciales,income,4-5000,Renta locales,ANGEL_G,
+4-6000,ING SERVICIOS LEGALES,income,4-0000,Honorarios,ANGEL_A,PARENT
+4-6100,ING Honorarios Corporativos,income,4-6000,Fees legales,ANGEL_A,
+4-7000,ING INTERCOMPANIAS,income,4-0000,Facturacion interna,ALL,CRITICAL CONSOLIDATION
+5-0000,COSTOS DE VENTA COGS,cost_of_goods_sold,,Agrupador Costos,ALL,HEADER - DO NOT USE
+5-1000,COSTO FB,cost_of_goods_sold,5-0000,Costo Bar Rest,CASINOS,PARENT
+5-1100,COSTO Bebidas Alcoholicas,cost_of_goods_sold,5-1000,Consumo licor,CASINOS,
+5-1200,COSTO Alimentos,cost_of_goods_sold,5-1000,Consumo comida,CASINOS,
+5-2000,COSTO GAMING Tipo C,cost_of_goods_sold,5-0000,Directos Juego,CASINOS,PARENT
+5-2100,COSTO Impuesto Participacion GGR,cost_of_goods_sold,5-2000,Impuesto 10 PC sobre Win,CASINOS,
+5-2200,COSTO Sistema Apuestas Deportivas,cost_of_goods_sold,5-2000,Fee proveedor sportbook,CASINOS,
+5-2300,COSTO Material de Juego Slots,cost_of_goods_sold,5-2000,Papel tickets repuestos menores,CASINOS,
+5-2400,COSTO Participacion Maquinas Terceros,cost_of_goods_sold,5-2000,Revenue Share Royal Estape,CASINOS,NEW REVENUE SHARE
+5-2500,COSTO COMISIONES RUTAS,cost_of_goods_sold,5-2000,Pagos a duenos de locales,CASINOS,NEW ROUTE COST
+5-2501,COSTO Comision Locales Rutas,cost_of_goods_sold,5-2500,Pago a Bar Gutierrez etc,CASINOS,NEW
+5-3000,COSTO PRODUCCION,cost_of_goods_sold,5-0000,Fabrica,LUXURY,PARENT
+5-3100,COSTO Materia Prima Consumida,cost_of_goods_sold,5-3000,Malta lupulo,LUXURY,
+5-3200,COSTO Envases y Empaques,cost_of_goods_sold,5-3000,Botellas cajas,LUXURY,
+5-3300,COSTO Mano de Obra Directa,cost_of_goods_sold,5-3000,Operarios planta,LUXURY,
+5-3400,COSTO CIF Aplicados,cost_of_goods_sold,5-3000,Indirectos fabricacion,LUXURY,
+5-4000,COSTO VENTAS MFW Servicios y Venta,cost_of_goods_sold,5-0000,Costos MF World,MFW,PARENT
+5-4100,COSTO Mercancia Vendida,cost_of_goods_sold,5-4000,Costo inventario vendido,MFW,
+5-4200,COSTO Servicios a Terceros,cost_of_goods_sold,5-4000,Costos NO reembolsables operacion,MFW,CRITICAL TRANSPARENCY
+5-9000,AJUSTES DE INVENTARIO,cost_of_goods_sold,5-0000,Mermas y variaciones,ALL,PARENT
+6-0000,GASTOS OPERATIVOS,expense,,Agrupador Gastos,ALL,HEADER - DO NOT USE
+6-1000,GASTOS DE PERSONAL,expense,6-0000,RRHH,ALL,PARENT
+6-1100,GASTO Salarios y Jornales,expense,6-1000,Sueldos brutos,ALL,
+6-1200,GASTO Cargas Sociales Patronales,expense,6-1000,CSS SE Riesgos,ALL,
+6-1300,GASTO Prestaciones Laborales,expense,6-1000,XIII Vacaciones Antiguedad,ALL,
+6-1400,GASTO Atenciones al Personal,expense,6-1000,Comidas uniformes fiestas,ALL,
+6-2000,SERVICIOS PUBLICOS Y ARRIENDOS,expense,6-0000,Facilidades,ALL,PARENT
+6-2100,GASTO Alquiler de Locales,expense,6-2000,Renta oficinas locales,ALL,
+6-2200,GASTO Energia Electrica,expense,6-2000,Luz,ALL,
+6-2300,GASTO Agua y Aseo,expense,6-2000,IDAAN,ALL,
+6-2400,GASTO Telecomunicaciones,expense,6-2000,Internet telefono,ALL,
+6-3000,MANTENIMIENTO Y REPARACIONES,expense,6-0000,Reparaciones,ALL,PARENT
+6-3100,GASTO Mantenimiento Edificios,expense,6-3000,Pintura plomeria,ALL,
+6-3200,GASTO Mantenimiento Equipos,expense,6-3000,Equipos operacion,ALL,
+6-3300,GASTO Suministros de Limpieza,expense,6-3000,Material aseo Gasto,ALL,
+6-4000,SERVICIOS PROFESIONALES,expense,6-0000,Terceros,ALL,PARENT
+6-4100,GASTO Honorarios Legales,expense,6-4000,Abogados externos,ALL,
+6-4200,GASTO Contabilidad y Auditoria,expense,6-4000,CPA externos,ALL,
+6-4300,GASTO Seguridad y Vigilancia,expense,6-4000,Agencia seguridad,ALL,
+6-5000,GASTOS GENERALES,expense,6-0000,Admin,ALL,PARENT
+6-5100,GASTO Utiles de Oficina,expense,6-5000,Papeleria copias,ALL,
+6-5200,GASTO Viajes y Representacion,expense,6-5000,Viaticos comidas clientes,ALL,
+6-5300,GASTO Publicidad y Mercadeo,expense,6-5000,Redes anuncios eventos,ALL,
+6-5400,GASTO Tasas e Impuestos Municipales,expense,6-5000,Placas avisos,ALL,
+6-5500,GASTO Seguros,expense,6-5000,Polizas danos vida,ALL,
+6-5600,GASTO Bancarios,expense,6-5000,Comisiones chequeras,ALL,
+6-6000,DEPRECIACIONES Y AMORTIZACIONES,expense,6-0000,No monetarios,ALL,PARENT
+6-6100,GASTO Depreciacion,expense,6-6000,Gasto periodico activos,ALL,
+7-0000,OTROS GASTOS INGRESOS,other_expense,,Resultados no op,ALL,HEADER - DO NOT USE
+7-1000,GASTOS Financieros,other_expense,7-0000,Intereses pagados,ALL,
+7-2000,PERDIDA GANANCIA Cambiaria,other_expense,7-0000,Diferencial cambiario,ALL,

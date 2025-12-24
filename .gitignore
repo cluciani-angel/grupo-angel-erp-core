@@ -1,0 +1,25 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.class
+.env
+venv/
+
+# --- Datos Sensibles (IMPORTANTE) ---
+# Ignoramos todos los CSV por defecto para evitar subir contabilidad real por error
+*.csv
+*.xlsx
+*.xls
+
+# Pero permitimos los archivos maestros de estructura (excepciones)
+!02-Master-Data/COA-Maestro/*.csv
+!02-Master-Data/Items/*.csv
+
+# Ignorar carpetas de trabajo temporal
+05-Migracion/input_data/*
+05-Migracion/output_data/*
+
+# --- Sistema ---
+.DS_Store
+Thumbs.db
+.vscode/
