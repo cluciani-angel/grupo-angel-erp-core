@@ -25,3 +25,9 @@ Centralizar la arquitectura contable del Grupo Ángel. Evitar el "Frankenstein E
 ## 5. Reglas de Directorio
 * `02-Master-Data`: El ADN del sistema.
 * `05-Migracion`: La sala de máquinas (ETL).
+
+## 6. Integración Google Ecosystem (GAS & GCP)
+* **Frontend:** Google Sites (Nexo Angel Portal).
+* **Backend Logic:** Google Apps Script (.gs) y GCP Cloud Functions.
+* **Política:** Todo código .gs debe respaldarse en la carpeta `06-Apps-Script`.
+* **AI Prompts:** Los prompts de los bots deben guardarse en `07-AI-Ops`.
